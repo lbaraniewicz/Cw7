@@ -27,8 +27,7 @@ namespace Cw7.Controllers
                     Clients = x.ClientTrips.ToList().Select(x => new DtoModels.Client { FirstName = x.IdClientNavigation.FirstName, LastName = x.IdClientNavigation.LastName }).ToList(),
                     Countries=x.IdCountries.ToList().Select(x => new DtoModels.Country { Name=x.Name}).ToList()
                 });
-            var aa = JsonConvert.SerializeObject(lista);
-            return Ok();
+            return Ok(JsonConvert.SerializeObject(lista));
         }
     }
 }
