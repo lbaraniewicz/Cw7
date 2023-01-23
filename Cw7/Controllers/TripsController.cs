@@ -30,4 +30,5 @@ namespace Cw7.Controllers
             return Ok(JsonConvert.SerializeObject(lista));
         }
     }
+
 }
